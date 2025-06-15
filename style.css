@@ -209,6 +209,14 @@ hr{
         padding: 10px;
     }
 
+    .content h1{
+        font-size: 1rem;
+    }
+
+    .content p{
+        font-size: 0.8rem;
+    }
+
     .blockB{
         display: none;
     }
