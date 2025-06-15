@@ -19,9 +19,9 @@
         <div class="container_subB">
             <div class="blockA">
                 <div class="sub_blockA1">
-                    <form class="search-container" action="#">
+                    <form class="search-container" action="#" onsubmit="return false;">
                     <input type="text" placeholder="Search here..." name="search" id="place">
-                    <button type="submit" onclick="generate()"><i class="fa-solid fa-qrcode"></i></button>
+                    <button type="submit" onclick="generate(); displayQR();"><i class="fa-solid fa-qrcode"></i></button>
                 </form>
                 </div>
                 <div class="result_box">
@@ -45,5 +45,27 @@
             </div>
         </div>
     </div>
+
+<script>
+  function generate() {
+    console.log("QR Code generating...");
+  }
+let isVisible = false;
+
+function displayQR() {
+  const display_block = document.getElementsByClassName("result_box")[0];
+  
+  if (isVisible) {
+    display_block.style.display = 'none';
+  } else {
+    display_block.style.display = 'flex'; // Use 'flex' since it's a flex container
+  }
+
+  isVisible = !isVisible;
+}
+
+
+</script>
+
 </body>
 </html>
