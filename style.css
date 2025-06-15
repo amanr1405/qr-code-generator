@@ -185,6 +185,14 @@ hr{
         margin: 20px;
     }
 
+    .sub_blockA2_res{
+        background-color: #fff;
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        box-shadow: 0 8px 12px rgb(0, 0, 0, 0.18);
+    }
+
     .blockA{
         border-radius: 25px;
         width: 100%;
