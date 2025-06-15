@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Spline Background</title>
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.7/build/spline-viewer.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: black;
+    }
+
+    .master {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    spline-viewer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120vw; /* extra width to ensure full coverage */
+      height: 120vh; /* extra height */
+      transform: translate(-50%, -50%) scale(1); /* zoomed + centered */
+      transform-origin: center center;
+      pointer-events: none; /* prevent interaction */
+    }
+
+    /* Responsive Scaling */
+    @media (max-width: 768px) {
+      spline-viewer {
+        transform: translate(-50%, -50%) scale(0.5);
+      }
+    }
+
+    @media (max-width: 480px) {
+      spline-viewer {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="master">
+    <spline-viewer url="https://prod.spline.design/OoFwco3htd5Cc96e/scene.splinecode"></spline-viewer>
+  </div>
+</body>
+</html>
